@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#52D2D3, #6AE1C3);
+    display: flex;
+    .profile-wrapper {
+        margin: auto;
+        width: 500px;
+        height: 700px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        .profile-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 50%;
+            .profile-bg-wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .img-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: inset 0 -7rem 9rem 0 rgba(51, 131, 193, 0.8);
+                    //background-image: url('https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+                    background-image: url('/src/assets/images/thumbnail.jpeg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+                .profile-thumbnail-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    -o-object-fit: cover;
+                }
+                .profile-thumbnail-box {
+                    position: absolute;
+                    bottom: -40px;
+                    left: 0;
+                    width: 120%;
+                    height: 100px;
+                    background-color: #ffffff;
+                    z-index: 2;
+                    transform: rotate(-8deg);
+                }
+            }
+        }
+        .profile-fg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+            .more-btn {
+                margin: 240px 20px 0 auto;
+                border-radius: 50%;
+                background: linear-gradient(to right top, #3786C3, #62F0C2);;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                cursor: pointer;
+                box-shadow: 0 10px 35px rgba(51, 131, 193, 0.5), 0 6px 6px rgba(98, 240, 194, 0.3);
+                &>svg {
+                    margin: auto;
+                    transform: scale(2.9);
+                    color: #ffffff;
+                }
+            }
+            .profile-content {
+                margin: 50px 50px 20px 50px;
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 0;
+                .profile-name {
+                    margin: 0 auto;
+                    font-weight: bolder;
+                    font-size: 30px;
+                }
+                .profile-job {
+                    margin: 0 auto;
+                    font-size: 18px;
+                    color: #C9C9C9;
+                }
+                .profile-desc {
+                    margin: 10px auto;
+                    text-align: center;
+                    color: #B0B0B0;
+                    font-size: 20px;
+                }
+                .social-list {
+                    margin: 10px auto;
+                    display: flex;
+                    .social-item {
+                        width: 26px;
+                        height: 26px;
+                        transform: scale(1.5);
+                        cursor: pointer;
+                        color: #B0B0B0;
+                        &:not(:first-child) {
+                            margin-left: 14px;
+                        }
+                        &:hover {
+                            color: #000000;
+                        }
+                    }
+                }
+                .count-list {
+                    margin: auto 0 0 0;
+                    display: flex;
+                    .count-item {
+                        margin: 0 auto;
+                        display: flex;
+                        flex-direction: column;
+                        .count-item-body {
+                            margin: 0 auto;
+                            display: flex;
+                            flex-direction: column;
+                            .count-title {
+                                margin: 0 auto;
+                                font-size: 20px;
+                                color: #C0C0C0;
+                            }
+                            .count-content {
+                                margin: 0 auto;
+                                font-weight: bold;
+                                font-size: 34px;
+                                color: #000000;
+                            }
+                        }
+                        &:first-child {
+                            margin: 0 auto 0 0;
+                        }
+                        &:last-child {
+                            margin: 0 0 0 auto;
+                        }
+                    }
+                    .border {
+                        width: 1px;
+                        height: 100%;
+                        background-color: #C0C0C0;
+                    }
+                }
+            }
+        }
+    }
+}
